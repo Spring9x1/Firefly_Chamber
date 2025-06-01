@@ -151,16 +151,16 @@ const styles = StyleSheet.create({
     // alignContent: 'center',
   },
   navigationButtons: {
-    flexDirection: 'row',
+    flexDirection: 'column',
     marginTop: 20,
     bottom: 150,
     width: '100%',
     paddingHorizontal: 10,
-    columnGap: 10,
+    rowGap: 40,
   },
 
   navButton: {
-    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+    backgroundColor: 'rgba(50, 163, 140, 0.5)',
     paddingVertical: 12,
     paddingHorizontal: 20,
     borderRadius: 8,
@@ -168,6 +168,7 @@ const styles = StyleSheet.create({
     borderColor: 'rgba(255, 255, 255, 0.3)',
     flex: 1,
     justifyContent: 'center',
+    zIndex: 10,
   },
 
   navImg: {
@@ -181,12 +182,36 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 
-
+//last here
   navButtonText: {
     color: 'white',
     textAlign: 'center',
     fontSize: 14,
     fontWeight: '600',
+  },
+
+  navGroup: {
+    flex:1,
+    marginBottom: 40,
+    zIndex: 0,
+  },
+  
+  samWrapper: {
+    position: 'absolute',
+    top: -65,                // naik ke atas tombol
+    right: '12.5%',          // karena width 75% → sisanya 25%, dibagi dua = 12.5%
+    width: '75%',
+    height: 75,
+    alignItems: 'flex-end',
+    zIndex: 10,
+  },
+  
+  samFrame: {
+    width: '100%',
+    height: '100%',
+    top: 20,
+    right: -40,
+    resizeMode: 'contain',
   },
 
   backButton: {

@@ -70,20 +70,29 @@ export default function App() {
 
             {/* Navigation Buttons */}
             <View style={styles.navigationButtons}>
-              <TouchableOpacity
-                onPress={() => setCurrentPage('todo')}
-              >
-                <ImageBackground source={require('./assets/image/Fireflypfp.jpg')} style={styles.navImg}>
+              <View style={styles.navGroup}>
+                <TouchableOpacity
+                  style={styles.navButton}
+                  onPress={() => setCurrentPage('todo')}
+                >
+                  <View style={styles.samWrapper}>
+                    <Image source={require('./assets/image/Sam_frame.png')} style={styles.samFrame} />
+                  </View>
                   <Text style={styles.navButtonText}>To-Do Lists</Text>
-                </ImageBackground>
-              </TouchableOpacity>
+                </TouchableOpacity>
+              </View>
 
-              <TouchableOpacity
-                style={styles.navButton}
-                onPress={() => setCurrentPage('other')}
-              >
-                <Text style={styles.navButtonText}>Future Feature</Text>
-              </TouchableOpacity>
+              <View>
+                <View style={styles.samWrapper}>
+                  <Image source={require('./assets/image/Sam_frame.png')} style={styles.samFrame} />
+                </View>
+                <TouchableOpacity
+                  style={styles.navButton}
+                  onPress={() => setCurrentPage('other')}
+                >
+                  <Text style={styles.navButtonText}>Future Feature</Text>
+                </TouchableOpacity>
+              </View>
             </View>
           </View>
         </View>
