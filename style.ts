@@ -72,7 +72,6 @@ const styles = StyleSheet.create({
     flex: 1,
     width: '100%',
     height: '100%',
-
   },
 
   profileBox: {
@@ -136,20 +135,27 @@ const styles = StyleSheet.create({
   doneText: { textDecorationLine: 'line-through', color: 'green' },
   normalText: { color: 'black' },
 
+  box2: {
+    width: '100%',
+    height: '100%',
+  },
+
   todoBox: {
     backgroundColor: '#14151C',
     borderTopLeftRadius: 24,
     borderTopRightRadius: 24,
     overflow: 'visible',
-    paddingHorizontal: 0,
-    alignItems: 'center',
+    paddingHorizontal: 20,
+    alignItems: 'stretch',
     flex: 1,
-    height: '100%',
-    top: 160,
-    padding: '75%',
+    marginTop: 160,
     paddingTop: 40,
+    // padding: '75%',
+    // height: '100%',
+    // width: '100%',
     // alignContent: 'center',
   },
+
   navigationButtons: {
     flexDirection: 'column',
     marginTop: 20,
@@ -160,7 +166,7 @@ const styles = StyleSheet.create({
   },
 
   navButton: {
-    backgroundColor: 'rgba(50, 163, 140, 0.5)',
+    backgroundColor: 'rgba(50, 163, 140, 0.2)',
     paddingVertical: 12,
     paddingHorizontal: 20,
     borderRadius: 8,
@@ -209,8 +215,8 @@ const styles = StyleSheet.create({
   samFrame: {
     width: '100%',
     height: '100%',
-    top: 20,
-    right: -40,
+    top: 17,
+    right: -32,
     resizeMode: 'contain',
   },
 
@@ -227,6 +233,18 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 14,
     fontWeight: '500',
+  },
+
+  todoTitle: {
+    zIndex: 99,
+    fontSize: 40,
+    textShadowOffset: { width: -1, height: 3 },
+    textShadowColor: 'rgba(0, 0, 0, 0.6)',
+    textShadowRadius: 5,
+    color: '#d2e6e6',
+    textAlign: 'center',
+    fontFamily: 'Chewy-Regular',
+    marginBottom: 20,
   },
 
   pageTitle: {
