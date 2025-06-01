@@ -123,17 +123,17 @@ const styles = StyleSheet.create({
   },
 
   header: { fontSize: 24, bottom: 100, marginBottom: 20, color: '#ffffff', fontFamily: "Chewy-Regular" },
-  inputRow: { flexDirection: 'row', gap: 10 },
+  // inputRow: { flexDirection: 'row', gap: 10 },
   input: {
     borderWidth: 1, borderColor: '#ccc', padding: 10, flex: 1, borderRadius: 6, color: '#ffffff'
   },
-  taskItem: {
-    marginVertical: 10, padding: 10, borderRadius: 6,
-    backgroundColor: '#f5f5f5',
-  },
+  // taskItem: {
+  //   marginVertical: 10, padding: 10, borderRadius: 6,
+  //   backgroundColor: '#f5f5f5',
+  // },
   buttonGroup: { flexDirection: 'row', justifyContent: 'space-between', marginTop: 5 },
-  doneText: { textDecorationLine: 'line-through', color: 'green' },
-  normalText: { color: 'black' },
+  // doneText: { textDecorationLine: 'line-through', color: 'green' },
+  // normalText: { color: 'black' },
 
   box2: {
     width: '100%',
@@ -151,6 +151,22 @@ const styles = StyleSheet.create({
     marginTop: 160,
     paddingTop: 40,
     // padding: '75%',
+    // height: '100%',
+    // width: '100%',
+    // alignContent: 'center',
+  },
+
+  otherBox: {
+    backgroundColor: '#14151C',
+    borderTopLeftRadius: 24,
+    borderTopRightRadius: 24,
+    overflow: 'visible',
+    paddingHorizontal: 20,
+    alignItems: 'stretch',
+    flex: 1,
+    marginTop: -40,
+    paddingTop: 40,
+    padding: '100%',
     // height: '100%',
     // width: '100%',
     // alignContent: 'center',
@@ -204,8 +220,8 @@ const styles = StyleSheet.create({
   
   samWrapper: {
     position: 'absolute',
-    top: -65,                // naik ke atas tombol
-    right: '12.5%',          // karena width 75% → sisanya 25%, dibagi dua = 12.5%
+    top: -65,                
+    right: '12.5%',          
     width: '75%',
     height: 75,
     alignItems: 'flex-end',
@@ -244,7 +260,31 @@ const styles = StyleSheet.create({
     color: '#d2e6e6',
     textAlign: 'center',
     fontFamily: 'Chewy-Regular',
-    marginBottom: 20,
+    marginBottom: 10,
+  },
+
+  todoSubtext: {
+    zIndex: 99,
+    fontSize: 15,
+    textShadowOffset: { width: -1, height: 3 },
+    textShadowColor: 'rgba(0, 0, 0, 0.6)',
+    textShadowRadius: 5,
+    color: '#a7bdb7',
+    textAlign: 'center',
+    fontFamily: 'Chewy-Regular',
+    marginBottom: 10,
+  },
+
+  todoSubtext2: {
+    zIndex: 99,
+    fontSize: 15,
+    textShadowOffset: { width: -1, height: 3 },
+    textShadowColor: 'rgba(0, 0, 0, 0.6)',
+    textShadowRadius: 5,
+    color: '#a7bdb7',
+    textAlign: 'center',
+    fontFamily: 'Chewy-Regular',
+    marginBottom: 10,
   },
 
   pageTitle: {
@@ -281,6 +321,92 @@ const styles = StyleSheet.create({
     fontSize: 14,
     textAlign: 'center',
   },
+
+  //todo
+  // todoTitle: {
+  //   fontSize: 24,
+  //   fontWeight: 'bold',
+  //   color: '#ffffff',
+  //   textAlign: 'center',
+  //   marginVertical: 10,
+  // },
+  
+  inputRow: {
+    flexDirection: 'row',
+    gap: 10,
+    paddingHorizontal: 15,
+    marginBottom: 10,
+  },
+  
+  inputBox: {
+    flex: 1,
+    backgroundColor: '#2b2b3d',
+    borderRadius: 10,
+    paddingHorizontal: 10,
+    paddingVertical: 8,
+    color: '#fff',
+    borderWidth: 1,
+    borderColor: '#3b3eff',
+  },
+  
+  addButton: {
+    backgroundColor: '#30d158',
+    borderRadius: 10,
+    paddingHorizontal: 16,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  
+  addButtonText: {
+    color: '#fff',
+    fontWeight: 'bold',
+    fontSize: 16,
+  },
+  
+  taskItem: {
+    backgroundColor: '#1e1e2f',
+    marginHorizontal: 15,
+    marginVertical: 5,
+    padding: 10,
+    borderRadius: 10,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  
+  normalText: {
+    color: '#ffffff',
+    fontSize: 16,
+  },
+  
+  doneText: {
+    color: '#999999',
+    fontSize: 16,
+    textDecorationLine: 'line-through',
+  },
+  
+  taskTime: {
+    color: '#bbb',
+    fontSize: 12,
+    marginTop: 3,
+  },
+  
+  iconRow: {
+    flexDirection: 'row',
+    gap: 10,
+    marginLeft: 10,
+  },
+  
+  icon: {
+    fontSize: 20,
+  },
+  buttonColumn: {
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    marginBottom: 10,
+    gap: 3
+  }
+  
 });
 
 export default styles;

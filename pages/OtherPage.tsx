@@ -9,16 +9,22 @@ const OtherPage = ({ setCurrentPage }) => (
   <View style={styles.container}>
     <Image source={require('../assets/image/1353722.jpeg')} style={styles.ImageBackground} resizeMode='cover' />
     <View style={styles.blackOverlay} />
-    <ScrollView contentContainerStyle={styles.scrollContent}>
-      <TouchableOpacity style={styles.backButton} onPress={() => setCurrentPage('profile')}>
-        <Text style={styles.backButtonText}>← Back to Profile</Text>
-      </TouchableOpacity>
-      <Text style={styles.pageTitle}>Future feature</Text>
-      <View style={styles.placeholderContent}>
-        <Text style={styles.placeholderText}>This is where your next feature will go!</Text>
-        <Text style={styles.placeholderSubtext}>You can add any new functionality here.</Text>
+
+    <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
+      <View style={styles.box2}>
+        <View style={styles.otherBox}>
+          <TouchableOpacity style={styles.backButton} onPress={() => setCurrentPage('profile')}>
+            <Text style={styles.backButtonText}>Back to Profile</Text>
+          </TouchableOpacity>
+          <View style={styles.placeholderContent}>
+            <Text style={styles.placeholderText}>This is where my future project for Firefly Chamber!</Text>
+            <Text style={styles.placeholderSubtext}>I will add more things in the future as long as my love for Firefly.</Text>
+          </View>
+
+        </View>
       </View>
     </ScrollView>
+
   </View>
 );
 
