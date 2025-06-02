@@ -74,7 +74,7 @@ export default function App() {
           onPress: () => {
             const updatedTasks = taskList.map(task => ({ ...task, done: true }));
             const sortedTasks = sortTasks(updatedTasks);
-            setTaskList(sortedTasks);
+            setTaskList(sortedTasks); // Fixed: proper implementation with auto-sorting
           },
         },
       ],
