@@ -20,8 +20,8 @@ const TodoPage = ({
             <Text style={styles.backButtonText}>Back to Profile</Text>
           </TouchableOpacity>
           <Text style={styles.todoTitle}>To-Do List</Text>
-          <Text style={styles.todoSubtext}>Quick!~ Go finish your tasks so we can hang out together!~</Text>
-          <Text style={styles.todoSubtext2}>~Firefly~</Text>
+          <Text style={styles.todoSubtext}>Quick!~ Go finish your tasks sonner than ever!~</Text>
+          <Text style={styles.todoSubtext2}>~Myself~</Text>
           <View style={styles.inputRow}>
             <TextInput style={styles.input} placeholder="Tulis tugas..." placeholderTextColor="#aaa" value={task} onChangeText={setTask} />
             <TextInput style={styles.input} placeholder="waktu..." placeholderTextColor="#aaa" value={waktu} onChangeText={setWaktu} />

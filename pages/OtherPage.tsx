@@ -17,8 +17,8 @@ const OtherPage = ({ setCurrentPage }) => (
             <Text style={styles.backButtonText}>Back to Profile</Text>
           </TouchableOpacity>
           <View style={styles.placeholderContent}>
-            <Text style={styles.placeholderText}>This is where my future project for Firefly Chamber!</Text>
-            <Text style={styles.placeholderSubtext}>I will add more things in the future as long as my love for Firefly.</Text>
+            <Text style={styles.placeholderText}>This is where my future project for "Spring's Chamber"!</Text>
+            <Text style={styles.placeholderSubtext}>I will add more things in the future as long as im still here.</Text>
           </View>
 
         </View>
