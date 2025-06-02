@@ -40,7 +40,7 @@ export default function App() {
     if (task.trim()) {
       const newTaskList = [...taskList, { text: task, waktu: waktu, done: false }];
       const sortedTasks = sortTasks(newTaskList);
-      setTaskList(sortedTasks); // Fixed: was setTaskList(sortTasks)
+      setTaskList(sortedTasks); 
       setTask('');
       setWaktu('');
     }
@@ -50,14 +50,14 @@ export default function App() {
     const updated = [...taskList];
     updated[index].done = !updated[index].done;
     const sortedTasks = sortTasks(updated);
-    setTaskList(sortedTasks); // Added auto-sorting
+    setTaskList(sortedTasks); 
   };
 
   const deleteTask = ({ index }: { index: number }) => {
     const updated = [...taskList];
     updated.splice(index, 1);
     const sortedTasks = sortTasks(updated);
-    setTaskList(sortedTasks); // Fixed: removed duplicate setTaskList
+    setTaskList(sortedTasks); 
   };
 
   const handleCheckAll = () => {
@@ -74,7 +74,7 @@ export default function App() {
           onPress: () => {
             const updatedTasks = taskList.map(task => ({ ...task, done: true }));
             const sortedTasks = sortTasks(updatedTasks);
-            setTaskList(sortedTasks); // Fixed: proper implementation with auto-sorting
+            setTaskList(sortedTasks); 
           },
         },
       ],
@@ -96,7 +96,7 @@ export default function App() {
           onPress: () => {
             const updatedTasks = taskList.map(task => ({ ...task, done: false }));
             const sortedTasks = sortTasks(updatedTasks);
-            setTaskList(sortedTasks); // Fixed: proper implementation with auto-sorting
+            setTaskList(sortedTasks); 
           },
         },
       ],

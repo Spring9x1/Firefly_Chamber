@@ -15,7 +15,7 @@ const TodoPage = ({
     <View style={styles.blackOverlay} />
     <View style={styles.box2}>
       <View style={styles.todoBox}>
-        <ScrollView contentContainerStyle={{ marginBottom: 30, paddingBottom: 20, flexGrow: 1 }}>
+        <ScrollView contentContainerStyle={{ marginBottom: 30, paddingBottom: 20, flexGrow: 1 }} scrollEnabled = {false}>
           <TouchableOpacity style={styles.backButton} onPress={() => setCurrentPage('profile')}>
             <Text style={styles.backButtonText}>Back to Profile</Text>
           </TouchableOpacity>
