@@ -1,5 +1,7 @@
 {
   "name": "FirstProject",
-  "displayName": "Firefly Complex"
+  "displayName": "Firefly Complex",
+  "plugins": [
+    "expo-font"
+  ]
 }
-

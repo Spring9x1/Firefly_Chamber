@@ -16,7 +16,11 @@ export default function App() {
   useEffect(() => {
     const loadTasks = async () => {
       const data = await AsyncStorage.getItem('tasks');
-      if (data) setTaskList(JSON.parse(data));
+      if (data) {
+        const parsedTasks = JSON.parse(data);
+        const sortedTasks = sortTasks(parsedTasks);
+        setTaskList(sortedTasks);
+      }
     };
     loadTasks();
   }, []);
@@ -25,9 +29,18 @@ export default function App() {
     AsyncStorage.setItem('tasks', JSON.stringify(taskList));
   }, [taskList]);
 
+  const sortTasks = (tasks) => {
+    return [...tasks].sort((a, b) => {
+      if (a.done === b.done) return 0;
+      return a.done - b.done;
+    });
+  }
+
   const addTask = () => {
     if (task.trim()) {
-      setTaskList([...taskList, { text: task, waktu: waktu, done: false }]);
+      const newTaskList = [...taskList, { text: task, waktu: waktu, done: false }];
+      const sortedTasks = sortTasks(newTaskList);
+      setTaskList(sortedTasks); // Fixed: was setTaskList(sortTasks)
       setTask('');
       setWaktu('');
     }
@@ -36,13 +49,15 @@ export default function App() {
   const toggleDone = ({ index }: { index: number }) => {
     const updated = [...taskList];
     updated[index].done = !updated[index].done;
-    setTaskList(updated);
+    const sortedTasks = sortTasks(updated);
+    setTaskList(sortedTasks); // Added auto-sorting
   };
 
   const deleteTask = ({ index }: { index: number }) => {
     const updated = [...taskList];
     updated.splice(index, 1);
-    setTaskList(updated);
+    const sortedTasks = sortTasks(updated);
+    setTaskList(sortedTasks); // Fixed: removed duplicate setTaskList
   };
 
   const handleCheckAll = () => {
@@ -57,11 +72,9 @@ export default function App() {
         {
           text: 'Yes',
           onPress: () => {
-            taskList.forEach((task, index) => {
-              if (!task.done) {
-                toggleDone({ index });
-              }
-            });
+            const updatedTasks = taskList.map(task => ({ ...task, done: true }));
+            const sortedTasks = sortTasks(updatedTasks);
+            setTaskList(sortedTasks); // Fixed: proper implementation with auto-sorting
           },
         },
       ],
@@ -81,11 +94,9 @@ export default function App() {
         {
           text: 'OK',
           onPress: () => {
-            taskList.forEach((task, index) => {
-              if (task.done) {
-                toggleDone({ index });
-              }
-            });
+            const updatedTasks = taskList.map(task => ({ ...task, done: false }));
+            const sortedTasks = sortTasks(updatedTasks);
+            setTaskList(sortedTasks); // Fixed: proper implementation with auto-sorting
           },
         },
       ],
@@ -117,7 +128,7 @@ export default function App() {
   const sharedProps = {
     task, setTask, waktu, setWaktu,
     taskList, addTask, toggleDone, deleteTask, setCurrentPage,
-    handleCheckAll, handleUncheckAll, handleClearAll
+    handleCheckAll, handleUncheckAll, handleClearAll, sortTasks
   };
 
   switch (currentPage) {

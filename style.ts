@@ -13,7 +13,7 @@ import {
 } from 'react-native';
 
 const styles = StyleSheet.create({
-  container: {
+  container: {  
     flex: 1,
     // height: '100%',
     // padding: 0,
@@ -204,7 +204,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 
-//last here
+  //last here
   navButtonText: {
     color: 'white',
     textAlign: 'center',
@@ -213,21 +213,21 @@ const styles = StyleSheet.create({
   },
 
   navGroup: {
-    flex:1,
+    flex: 1,
     marginBottom: 40,
     zIndex: 0,
   },
-  
+
   samWrapper: {
     position: 'absolute',
-    top: -65,                
-    right: '12.5%',          
+    top: -65,
+    right: '12.5%',
     width: '75%',
     height: 75,
     alignItems: 'flex-end',
     zIndex: 10,
   },
-  
+
   samFrame: {
     width: '100%',
     height: '100%',
@@ -237,7 +237,7 @@ const styles = StyleSheet.create({
   },
 
   backButton: {
-    backgroundColor: 'rgba(0, 0, 0, 0.3)',
+    backgroundColor: 'rgba(50, 163, 140, 0.2)',
     paddingVertical: 8,
     paddingHorizontal: 15,
     borderRadius: 6,
@@ -301,11 +301,16 @@ const styles = StyleSheet.create({
   },
 
   placeholderContent: {
-    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    backgroundColor: 'rgba(50, 163, 140, 0.2)',
     padding: 30,
     borderRadius: 10,
     marginTop: 50,
     alignItems: 'center',
+    paddingVertical: 5,
+    paddingHorizontal: 5,
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.3)',
+    justifyContent: 'center',
   },
 
   placeholderText: {
@@ -330,14 +335,14 @@ const styles = StyleSheet.create({
   //   textAlign: 'center',
   //   marginVertical: 10,
   // },
-  
+
   inputRow: {
     flexDirection: 'row',
     gap: 10,
     paddingHorizontal: 15,
     marginBottom: 10,
   },
-  
+
   inputBox: {
     flex: 1,
     backgroundColor: '#2b2b3d',
@@ -348,7 +353,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#3b3eff',
   },
-  
+
   addButton: {
     backgroundColor: '#30d158',
     borderRadius: 10,
@@ -356,13 +361,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  
+
   addButtonText: {
     color: '#fff',
     fontWeight: 'bold',
     fontSize: 16,
   },
-  
+
   taskItem: {
     backgroundColor: '#1e1e2f',
     marginHorizontal: 15,
@@ -373,40 +378,59 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
   },
-  
+
   normalText: {
     color: '#ffffff',
     fontSize: 16,
   },
-  
+
   doneText: {
     color: '#999999',
     fontSize: 16,
     textDecorationLine: 'line-through',
   },
-  
+
   taskTime: {
     color: '#bbb',
     fontSize: 12,
     marginTop: 3,
   },
-  
+
   iconRow: {
     flexDirection: 'row',
     gap: 10,
     marginLeft: 10,
   },
-  
+
   icon: {
     fontSize: 20,
   },
+
   buttonColumn: {
     flexDirection: 'column',
     justifyContent: 'space-between',
     marginBottom: 10,
-    gap: 3
-  }
-  
+    marginTop: 10,
+    gap: 8,
+  },
+
+  checkButton: {
+    backgroundColor: 'rgba(50, 163, 140, 0.2)',
+    paddingVertical: 5,
+    paddingHorizontal: 5,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: 'rgba(255, 255, 255, 0.3)',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  buttonText: {
+    color: 'white',
+    fontSize: 16,
+    fontFamily: 'Chewy-Regular',
+  },
+
 });
 
 export default styles;
